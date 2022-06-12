@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    char str[100]="hello praveen how are you & 2 are in 3.";
+    int alphabets=0,digits=0,others=0,i=0;
+    while(str[i]!='\0')
+    {
+        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        {
+            alphabets++;
+        }
+        else if(str[i]>='0' && str[i]<='9')
+        {
+            digits++;
+        }
+        else
+        {
+            others++;
+        }
+        i++;
+    }
+    printf("No.of alphabets are %d:\n",alphabets);
+    printf("No.of numbers are %d:\n",digits);
+    printf("Remaining others are %d:",others);
+    return 0;
+}

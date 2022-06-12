@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100]="hello world how are you",reverse[100];
+    int i,index=0,ws,we,len;
+    len=strlen(str);
+    ws=len-1;
+    we=len-1;
+    while(ws>0)
+    {
+        if(str[ws]==' ')
+        {
+            i=ws+1;
+            while(i<=we)
+            {
+                reverse[index]=str[i];
+                i++;
+                index++;
+            }
+            reverse[index++]=' ';
+            we=ws-1;
+        }
+        ws--;
+    }
+    for(i=0;i<=we;i++)
+    {
+        reverse[index]=str[i];
+        index++;
+    }
+    reverse[index]='\0';
+    printf("original string is %s\n",str);
+    printf("reversed string is %s",reverse);
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    char str[100]="satish",reverse[100];
+    char *s=str,*r=reverse;
+    int len=0;
+    while(*(s++)) len++;
+    s--;
+    while(len >= 0)
+    {
+        *(r++) = *(--s);
+        len--;
+    }
+    *r = '\0';
+    printf("original string is = %s\n",str);
+    printf("Reversed string is = %s",reverse);
+    return 0;
+}
